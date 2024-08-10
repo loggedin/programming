@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+
+build-backend = "hatchling.build"
+
+[project]
+name = "vigenere"
+
+version = "0.0.1"
+
+authors = [
+  { name="Michael Hudson", email="michael.hudson23@imperial.ac.uk" },
+]
+
+description = "A collection of functions that can be used to encrypt and decrypt messages using the Vigenere cipher"
+
+readme = "README.md"
+
+requires-python = ">=3.7"
+
+License = "MIT"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  ".", "src",
+]
+addopts = [
+    "--import-mode=importlib",
+]
