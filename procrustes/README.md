@@ -9,7 +9,7 @@ $$
 where the Frobenius norm of an $n \times m$ matrix, $A$, can be defined as
 
 $$
-\| A \|_F = \left( \sum_{i=1}^{n} \sum_{j=1}^{m} |A_{ij}|^2 \right)^{1/2}.
+\| A \|\_F = \left( \sum_{i=1}^{n} \sum_{j=1}^{m} |A_{ij}|^2 \right)^{1/2}.
 $$
 
 The solution to the problem (Schönemann, 1966) is found by computing the singular value decomposition (SVD) of $Y^T X$,
@@ -43,7 +43,7 @@ for a given threshold $\rho \in \mathbb{R}^+$, then $X_{\text{ref}}$ is set to $
 It is useful to be able to compute the sample mean sequentially. The sequential update formula at time $t$ is
 
 $$
-\bar{Y}_t = \left(1 - \frac{1}{t}\right) \bar{Y}_{t-1} + \frac{1}{t} Y_t
+\bar{Y}\_t = \left(1 - \frac{1}{t}\right) \bar{Y}_{t-1} + \frac{1}{t} Y_t
 $$
 
 for $t \geq 2$, after initializing $\bar{Y}_1 = Y_1$.
