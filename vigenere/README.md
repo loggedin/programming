@@ -38,9 +38,7 @@ Z & Z & A & B & C & D & E & F & G & H & I & J & K & L & M & N & O & P & Q & R & 
 \end{array}
 $$
 
-Let us look at how to implement the Vigenère cipher. Suppose the message to be encrypted is `imperialcollege` and the secret keyword is `MATRIX` (we also use uppercase letters for the keyword).
-
-The first step is to write out the letters of the keyword repeatedly until the new key string has the same number of letters as the message, i.e.
+Let us look at how to implement the Vigenère cipher. Suppose the message to be encrypted is `imperialcollege` and the secret keyword is `MATRIX` (we also use uppercase letters for the keyword). The first step is to write out the letters of the keyword repeatedly until the new key string has the same number of letters as the message, i.e.
 
 **Message:** `imperialcollege`  
 **Key string:** `MATRIXMATRIXMAT`  
@@ -48,7 +46,7 @@ The first step is to write out the letters of the keyword repeatedly until the n
 
 In the example above, you will notice that the key string has the keyword repeated twice and then ends in `MAT`, since this makes the key string the same number of letters as the message. (Usually, the keyword is shorter than the message, but if the message had $m$ letters and the keyword had $k > m$ letters, then only the first $m$ letters of the keyword need to be used).
 
-Next, the message is encrypted one letter at a time. Each letter of the message is encrypted by shifting it according to the corresponding letter in the key string. For example, the first letter of the message is `i`, and the first letter in the key string is `M`, so we would shift the letter `i` by `M` units, where $A$ is 0, $B$ is 1, $C$ is 2, etc. We can use the tabula recta to help us with this: in row `M` and column `I` we see the letter is `U`, so `i` is encrypted as `U`.
+Next, the message is encrypted one letter at a time. Each letter of the message is encrypted by shifting it according to the corresponding letter in the key string. For example, the first letter of the message is `i`, and the first letter in the key string is `M`, so we would shift the letter `i` by `M` units, where `A` is 0, `B` is 1, `C` is 2, etc. We can use the tabula recta to help us with this: in row `M` and column `I` we see the letter is `U`, so `i` is encrypted as `U`.
 
 The second letter in the message is `m` and the corresponding (second) key string letter is `A`, so in row `A`, column `M` of the tabula recta, the encrypted letter is `M`. Repeating this procedure, leads to the encrypted text `UMIVZFMLVFTIQGX`.
 
