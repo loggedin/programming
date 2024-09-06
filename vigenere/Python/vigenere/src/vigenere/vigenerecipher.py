@@ -1,5 +1,3 @@
-# College CID: 02287994
-
 # import the following core module for regular expression operations
 import re
 

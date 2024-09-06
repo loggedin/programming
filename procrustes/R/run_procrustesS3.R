@@ -1,9 +1,5 @@
-# Name: Michael Hudson
-# CID: 02287994
-
 source("procrustesS3.R")
 
-###START DO NOT MODIFY##
 SEED <- 255
 n <- 10
 p <- 2
@@ -23,14 +19,8 @@ for (i in seq(1, T_observations)) {
   X <- X + noise
   data[i, , ] <- X
 }
-###END DO NOT MODIFY####
-
-# C
-# (a)
 
 proc <- procrust(x = X0, y = X0)
-
-# (b)
 
 # Update Y_bar sequentially for each element in data
 for (i in seq(1, T_observations)) {
@@ -39,8 +29,6 @@ for (i in seq(1, T_observations)) {
 
 # Check that t = 21 after all updates have been implemented
 cat(proc$t)
-
-# (c)
 
 # Save the current value of proc$X_ref
 X_ref_current <- proc$X_ref

@@ -1,5 +1,3 @@
-# College CID: 02287994
-
 # Implement generate_key_string function
 # Given a message and a keyword, this function returns a key string of the
 # appropriate length

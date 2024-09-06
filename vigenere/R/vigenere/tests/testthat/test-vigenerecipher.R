@@ -1,5 +1,3 @@
-# College CID: 02287994
-
 # tests for generate_key_string, letter_units and shift_n_units
 
 test_that('generate_key_string correctly computes the key string when the

@@ -1,5 +1,3 @@
-# College CID: 02287994
-
 import unittest
 from vigenere import vigencrypt, vigdecrypt
 
