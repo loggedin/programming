@@ -4,7 +4,7 @@ This repository contains various programming projects. Each is written in both P
 
 ## procrustes
 
-Given two matrices, $X, Y \in \mathbb{R} ^ {n \times p}$, the orthogonal Procrustes problem is to find the orthogonal matrix, $R \in \mathbb{R} ^ {p \times p}$, which minimises the distance between $X$ and $YR$ in terms of the Frobenius norm:
+Given two matrices, $X, Y \in ℝ ^ {n \times p}$, the orthogonal Procrustes problem is to find the orthogonal matrix, $R \in ℝ ^ {p \times p}$, which minimises the distance between $X$ and $YR$ in terms of the Frobenius norm:
 
 $$
 R^* = \mathop{\arg \min}\limits_{R} \lVert YR - X \rVert _F^2,
@@ -22,13 +22,13 @@ $$
 Y^T X = U \Sigma V^T,
 $$
 
-where $\Sigma \in \mathbb{R} ^ {p \times p}$ contains the rank($Y^T X$) singular values and $U \in \mathbb{R} ^ {p \times p}$, $V \in \mathbb{R} ^ {p \times p}$ the corresponding left and right singular vectors. Then
+where $\Sigma \in ℝ ^ {p \times p}$ contains the rank($Y^T X$) singular values and $U \in ℝ ^ {p \times p}$, $V \in ℝ ^ {p \times p}$ the corresponding left and right singular vectors. Then
 
 $$
 R^* = UV^T.
 $$
 
-Procrustes analysis is useful for comparing the shape of objects. Given observations $`y = \{ Y_t \in \mathbb{R} ^ {n \times p} \ : \ t = 1, \ldots, T \}`$, the goal is to apply an orthogonal transformation to each $Y_t$ (using the equation above) such that it is most closely aligned (in terms of the Frobenius norm) with some reference, $X_{\text{ref}} \in \mathbb{R} ^ {n \times p}$. Initially, $X_{\text{ref}}$ is set at random to one of the elements of $y$. In Generalised Procrustes Analysis (Gower, 1975), the sample mean of the transformed observations is computed as
+Procrustes analysis is useful for comparing the shape of objects. Given observations $`y = \{ Y_t \in ℝ ^ {n \times p} \ : \ t = 1, \ldots, T \}`$, the goal is to apply an orthogonal transformation to each $Y_t$ (using the equation above) such that it is most closely aligned (in terms of the Frobenius norm) with some reference, $X_{\text{ref}} \in ℝ ^ {n \times p}$. Initially, $X_{\text{ref}}$ is set at random to one of the elements of $y$. In Generalised Procrustes Analysis (Gower, 1975), the sample mean of the transformed observations is computed as
 
 $$
 \overline{Y} = \frac{1}{T} \sum_{t=1}^{T} Y_t R_t^*,
@@ -40,7 +40,7 @@ $$
 d_P \equiv \lVert \overline{Y} - X_{\text{ref}} \rVert_F > \rho
 $$
 
-for a given threshold $\rho \in \mathbb{R}^+$, then $X_{\text{ref}}$ is set to $X_{\text{ref}} \leftarrow \overline{Y}$ and the optimal orthogonal transformations are recomputed for each $Y_t \in y$.
+for a given threshold $\rho \in ℝ^+$, then $X_{\text{ref}}$ is set to $X_{\text{ref}} \leftarrow \overline{Y}$ and the optimal orthogonal transformations are recomputed for each $Y_t \in y$.
 
 It is useful to be able to compute the sample mean sequentially. The sequential update formula at time $t$ is
 
