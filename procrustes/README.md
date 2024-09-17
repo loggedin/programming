@@ -1,4 +1,4 @@
-## procrustes
+# procrustes
 
 Given two matrices, $X, Y \in ℝ ^ {n \times p}$, the orthogonal Procrustes problem is to find the orthogonal matrix, $R \in ℝ ^ {p \times p}$, which minimises the distance between $X$ and $YR$ in terms of the Frobenius norm:
 
